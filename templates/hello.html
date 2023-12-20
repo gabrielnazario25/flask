@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Hello From Flask!</title>
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" />
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+<body>
+    {% if name %}
+        <h1>Olá, {{ name }}!</h1>
+    {% else %}
+        <h1>Olá, mundo!</h1>
+    {% endif %}
+</body>
+</html>
